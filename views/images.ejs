@@ -44,8 +44,10 @@
 	</script>
 	
 	<script>
+		
 		var prntsrvr = document.getElementById('prntsrvr').contentWindow;
-      	prntsrvr.postMessage(localStorage.getItem('THRDPRTY'),"*");
+	//alert("THRDPRTY"+localStorage.getItem('THRDPRTY'));      
+	prntsrvr.postMessage(localStorage.getItem('THRDPRTY'),"*");
 	</script>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 

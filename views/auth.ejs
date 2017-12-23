@@ -41,6 +41,7 @@
         console.log("Unrecognised Host Attempting to pass JWT Token");
         return;
       }
+      console.log(data);
       console.log("Host OK, parsing token.");
       var data = JSON.parse(msg.data);
       console.log("Received Token:" + data.token);
