@@ -46,8 +46,9 @@ app.get('/',function(req,res){
 
 app.get('/gallery/:token',function(req,res){//token will be username encrypted with secret
   var decoded = jwt.decode(req.params.token,secret);
-  console.log(decoded);
-
+  	console.log(decoded);
+	console.log(decoded.exp);
+	console.log(Date.now());
   if(decoded.exp < Date.now()){
     res.end("Token Expired! Please authenticate again");
 
