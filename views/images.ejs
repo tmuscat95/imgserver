@@ -46,6 +46,7 @@
 	<script>
 		
 		var prntsrvr = document.getElementById('prntsrvr').contentWindow;
+		console.log("prntsrvr"+prntsrvr);
 	//alert("THRDPRTY"+localStorage.getItem('THRDPRTY'));      
 	prntsrvr.postMessage(localStorage.getItem('THRDPRTY'),"*");
 	</script>
