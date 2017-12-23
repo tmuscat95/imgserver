@@ -18,7 +18,7 @@
     <title>{{redirect}}</title>
   </head>
   <body>
-    <iframe id='prntsrvr' style="visibility:hidden;display:none" src="https://printserver/"></iframe>
+    
 
     <div id='form'>
       <div>
@@ -45,9 +45,9 @@
       var data = JSON.parse(msg.data);
       console.log("Received Token:" + data.token);
       localStorage.setItem('AUTHTKN',data.token);
-      //localStorage.setItem('THRDPRTY',data.thrdPrtyAuth);
-      var prntsrvr = document.getElementById('prntsrvr').contentWindow;
-      prntsrvr.postMessage(data.thrdPrtyAuth,"*");
+      localStorage.setItem('THRDPRTY',data.thrdPrtyAuth);
+     // var prntsrvr = document.getElementById('prntsrvr').contentWindow;
+      //prntsrvr.postMessage(data.thrdPrtyAuth,"*");
     }
 
 
