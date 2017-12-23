@@ -50,9 +50,9 @@ app.get('/gallery/:token',function(req,res){//token will be username encrypted w
 	console.log(decoded.exp);
 	console.log(Date.now());
   if(decoded.exp < Date.now()){
-    res.end("Token Expired! Please authenticate again");
-
-  }
+    console.log("Token Expired!");
+    res.render('auth_exp');  
+}
 
   users.findOne({username:decoded.username},
     function(err,user){
