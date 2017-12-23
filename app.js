@@ -40,6 +40,9 @@ app.get('/',function(req,res){
     res.render('auth');
 });
 
+app.get('/logout',function(req,res){
+  res.render('auth_exp');
+});
 // app.get('/home',function(req,res){
 //   res.render('home');
 // });
@@ -51,7 +54,7 @@ app.get('/gallery/:token',function(req,res){//token will be username encrypted w
 	console.log(Date.now());
   if(decoded.exp < Date.now()){
     console.log("Token Expired!");
-    res.render('auth_exp');  
+    res.render('auth_exp');
 }
 
   users.findOne({username:decoded.username},
