@@ -42,13 +42,14 @@
 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
 	</script>
-	
+
 	<script>
-		
+
 		var prntsrvr = document.getElementById('prntsrvr').contentWindow;
 		console.log("prntsrvr"+prntsrvr);
-	//alert("THRDPRTY"+localStorage.getItem('THRDPRTY'));      
-	prntsrvr.postMessage(localStorage.getItem('THRDPRTY'),"*");
+	//alert("THRDPRTY"+localStorage.getItem('THRDPRTY'));
+	  var pass = JSON.stringify({thrdPrtyAuth:localStorage.getItem('THRDPRTY')});
+	prntsrvr.postMessage(pass,"*");
 	</script>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 
