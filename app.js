@@ -8,7 +8,7 @@ var jwt = require('jwt-simple');
 
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
-
+const secret = 'cps3232';
 
 //connect to database
 mongoose.connect('mongodb://imgserver:1234@imgserver:27018/usrImagesDB');
