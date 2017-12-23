@@ -34,18 +34,7 @@
 </head>
 
 <body>
-	<iframe id='prntsrvr' style="visibility:hidden;display:none" src="https://printserver/"></iframe>
-
-
-
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
-	  		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-	  		crossorigin="anonymous">
-	</script>
-
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
-	</script>
-
+	<iframe id="prntsrvr" style="visibility:hidden;display:none" src="https://printserver/"></iframe>
 
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 
@@ -100,14 +89,17 @@
 	</div>
 </div>
 
-<script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+<script>
 	var prntsrvr = document.getElementById('prntsrvr').contentWindow;
 	//console.log("prntsrvr"+prntsrvr);
-//alert("THRDPRTY"+localStorage.getItem('THRDPRTY'));
+	//alert("THRDPRTY"+localStorage.getItem('THRDPRTY'));
 	var pass = JSON.stringify({thrdPrtyAuth:localStorage.getItem('THRDPRTY')});
-	console.log(pass);
-prntsrvr.postMessage(pass,"*");
+	alert(pass);
+	prntsrvr.postMessage(pass,"*");
 </script>
+
 </body>
 </html>
