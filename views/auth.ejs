@@ -30,9 +30,10 @@
       const imgServer = "https://imgserver/"; //image server address
       const printServer = "https://printserver/";
   	//const imgServer = "https://localhost/";
+    //If user has token , the token shall be passed to the server.
     if(localStorage.getItem('AUTHTKN')!==null)
       window.location.href = imgServer+'gallery/'+localStorage.getItem('AUTHTKN');
-
+      //Function to handle passing of the token from the login page and it's subsequent storage.
       window.onmessage = function(msg){
         console.log(msg.origin);
         if(msg.origin.substring(0,20) !== authServer.substring(0,20)){
